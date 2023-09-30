@@ -1,19 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const admin = require('firebase-admin');
 
 // const swaggerDocument = require('./swagger.json');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger_output.json');
-const credentials = require('./key.json');
+
 const router = require('./routes/routers.js');
-
-admin.initializeApp({
-  credential: admin.credential.cert(credentials),
-});
-
-const db = admin.firestore();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
