@@ -1,0 +1,70 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Blog API Documentation",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "host": "stackblitzstartersszfdcq-rakg--8080--719f0797.local-credentialless.webcontainer.io:",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/create": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint to sign in a specific user",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "User information.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/addUser"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "addUser": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "abc@gmail.com  "
+        },
+        "firstname": {
+          "type": "string",
+          "example": "John"
+        },
+        "lastname": {
+          "type": "string",
+          "example": "Doe"
+        }
+      }
+    }
+  }
+}
