@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const dbcon = require('../db.js');
+const db = require('../db.js');
 // const Users = require('../Controller/userController');
 // const auth = require('../Middleware/auth');
 
@@ -20,13 +20,13 @@ router.post('/create', async (req, res) => {
   try {
     const id = req.body.email;
     console.log(req.body);
-    
+
     const userData = {
       email: req.body.email,
       firstname: req.body.firstname,
-      lastname: req.body.lastname,
+      lastname: req.body.lastname
     };
-    const response = dbcon.collection('usersd').doc(id).set(userData);
+    const response = db.collection('usersd').doc(id).set(userData);
     console.log(response);
     res.send(response);
   } catch (error) {
