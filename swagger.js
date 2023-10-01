@@ -16,7 +16,7 @@ const config = {
   //     }
   //   },
   tags: [],
-  host: 'stackblitzstartersszfdcq-rakg--8080--719f0797.local-credentialless.webcontainer.io:',
+  host: 'localhost:8080',
   schemes: ['http', 'https'],
   consumes: ['application/json'],
   produces: ['application/json'],

@@ -5,7 +5,7 @@
     "description": "",
     "version": "1.0.0"
   },
-  "host": "stackblitzstartersszfdcq-rakg--8080--719f0797.local-credentialless.webcontainer.io:",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
     "http",

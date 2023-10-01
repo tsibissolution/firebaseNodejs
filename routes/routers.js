@@ -26,7 +26,7 @@ router.post('/create', async (req, res) => {
       firstname: req.body.firstname,
       lastname: req.body.lastname
     };
-    const response = db.collection('usersd').doc(id).set(userData);
+    const response = db.collection('usersd').add(userData);
     console.log(response);
     res.send(response);
   } catch (error) {
